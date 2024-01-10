@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        table {
+            width: 100%;
+            background-color: rgb(255, 202, 202);
+            border: 1px solid black;
+            font-weight: 700;
+            text-transform: capitalize ;
+        }
+
+        td {
+            background-color: rgb(255, 245, 245);
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        th {
+            margin-top: 20px;
+        }
+    </style>
+
+    <table>
+        <thead>
+            <th>name</th>
+            <th>email</th>
+            <th>phone</th>
+
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+
+    <script>
+        data = [
+            {
+                name: "jay",
+                email: "jay@gmail.com",
+                phone: "12345",
+            },
+            {
+                name: "ajay",
+                email: "ajay@gmail.com",
+                phone: "12345",
+            },
+            {
+                name: "vijay",
+                email: "vijay@gmail.com",
+                phone: "12345",
+            },
+            {
+                name: "ashish",
+                email: "ashish@gmail.com",
+                phone: "12345",
+            },
+        ]
+
+        class persons {
+            constructor() {
+                let tbody = document.getElementById("tbody")
+                let tr = ''
+                data.map((val) => {
+
+                    tr += `<tr><td>${val.name}</td><td>${val.email}</td><td>${val.phone}</td></tr>`
+                })
+                tbody.innerHTML = tr
+            }
+
+        }
+
+        let newperson = new persons()
+    </script>
+</body>
+
+</html>

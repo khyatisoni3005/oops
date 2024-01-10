@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        class students {
+            constructor(physics, chemistry, biology, maths, computer) {
+                this.physics = physics
+                this.chemistry = chemistry
+                this.biology = biology
+                this.maths = maths
+                this.computer = computer
+            }
+
+            printresult() {
+                let result = ((this.physics + this.maths + this.chemistry + this.computer + this.biology) / 5)
+                console.log(result);
+                if (result >= 90) {
+                    console.log(result + " " + " A");
+                }
+                else if (result >= 80 && result <= 90) {
+                    console.log(result + " " + " B");
+                } else if (result >= 70 && result <= 80) {
+                    console.log(result + " " + " C");
+                }
+                else if (result >= 60 && result <= 70) {
+                    console.log(result + " " + " D");
+                } else if (result >= 50 && result <= 60) {
+                    console.log(result + " " + " E");
+                }
+                else if (result >= 40 && result <= 50) {
+                    console.log(result + " " + " F");
+                }
+            }
+        }
+
+        let student1 = new students(87, 93, 98, 85, 93)
+        let student2 = new students(32, 54, 65, 43, 23)
+        student1.printresult()
+        student2.printresult()
+    </script>
+</body>
+
+</html>
